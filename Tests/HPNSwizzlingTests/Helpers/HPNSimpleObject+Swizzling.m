@@ -13,26 +13,27 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-#import "HPNSimpleObject+Swizzling.h"
-
 @import Foundation;
+
 @import HPNSwizzling;
+
+#import "HPNSimpleObject.h"
 
 
 
 @implementation HPNSimpleObject0 (Swizzling)
 
-static void MyL0PrintHello1(id self, SEL _cmd);
-static void (*OriginalL0PrintHello1)(id self, SEL _cmd);
+static void MyL0Test1(id self, SEL _cmd);
+static void (*OriginalL0Test1)(id self, SEL _cmd);
 
-static void MyL0PrintHello1(id self, SEL _cmd) {
-	witnesses[@"MyL0PrintHello1"] = @YES;
-	OriginalL0PrintHello1(self, _cmd);
+static void MyL0Test1(id self, SEL _cmd) {
+	witnesses[@"MyL0Test1"] = @YES;
+	OriginalL0Test1(self, _cmd);
 }
 
 + (void)load
 {
-	CHECKED_SWIZZLE(HPNSimpleObject0, printHello1, MyL0PrintHello1, OriginalL0PrintHello1);
+	CHECKED_SWIZZLE(HPNSimpleObject0, test1, MyL0Test1, OriginalL0Test1);
 }
 
 @end

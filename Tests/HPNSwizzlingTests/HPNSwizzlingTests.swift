@@ -25,9 +25,10 @@ class HPNSwizzlingTests : XCTestCase {
 	}
 	
 	func testSimpleSwizzleAtLoad() {
-		HPNSimpleObject0().printHello1()
-		XCTAssertEqual(witnesses.object(forKey: "printHello1") as? Bool ?? false, true)
-		XCTAssertEqual(witnesses.object(forKey: "MyL0PrintHello1") as? Bool ?? false, true)
+		assert(witnesses.count == 0)
+		HPNSimpleObject0().test1()
+		XCTAssertEqual(witnesses.object(forKey: "test1") as? Bool ?? false, true)
+		XCTAssertEqual(witnesses.object(forKey: "MyL0Test1") as? Bool ?? false, true)
 	}
 	
 }

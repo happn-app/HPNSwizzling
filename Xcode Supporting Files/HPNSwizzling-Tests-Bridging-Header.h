@@ -4,3 +4,5 @@
 
 #import "HPNSimpleObject.h"
 #import "HPNSimpleObject+Swizzling.h"
+
+#import "CodeCoverage.h"

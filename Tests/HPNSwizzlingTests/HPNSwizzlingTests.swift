@@ -24,6 +24,11 @@ class HPNSwizzlingTests : XCTestCase {
 		witnesses = [:]
 	}
 	
+	func testNothingGainCoverage() {
+		_HPNSwizzling_heyTheresARealSymbolInThisLib_()
+		XCTAssertTrue(true)
+	}
+	
 	func testSimpleSwizzleAtLoad() {
 		assert(witnesses.count == 0)
 		HPNSimpleObject0().test1()

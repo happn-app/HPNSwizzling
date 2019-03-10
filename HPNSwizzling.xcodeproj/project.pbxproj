@@ -49,6 +49,7 @@
 		7BC0AFBF22356A5000EF4920 /* HPNSimpleObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNSimpleObject.m; sourceTree = "<group>"; };
 		7BC0AFC222356C9000EF4920 /* HPNSimpleObject+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HPNSimpleObject+Swizzling.m"; sourceTree = "<group>"; };
 		7BC0AFC42235763E00EF4920 /* HPNSimpleObject+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSimpleObject+Swizzling.h"; sourceTree = "<group>"; };
+		7BC0AFC52235CC3700EF4920 /* CodeCoverage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeCoverage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +149,7 @@
 		7BC0AFBC22356A0400EF4920 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7BC0AFC52235CC3700EF4920 /* CodeCoverage.h */,
 				7BC0AFBE22356A5000EF4920 /* HPNSimpleObject.h */,
 				7BC0AFBF22356A5000EF4920 /* HPNSimpleObject.m */,
 				7BC0AFC42235763E00EF4920 /* HPNSimpleObject+Swizzling.h */,

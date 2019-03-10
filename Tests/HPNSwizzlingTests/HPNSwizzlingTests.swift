@@ -39,4 +39,13 @@ class HPNSwizzlingTests : XCTestCase {
 		XCTAssertEqual(witnesses.object(forKey: "MyL1Test2") as? Bool ?? false, true)
 	}
 	
+	func testDoubleInvertedSwizzle() {
+		assert(witnesses.count == 0)
+		doDoubleInvertedSwizzle()
+		HPNSimpleObject2().test3()
+		XCTAssertEqual(witnesses.object(forKey: "test3") as? Bool ?? false, true)
+		XCTAssertEqual(witnesses.object(forKey: "MyL1Test3") as? Bool ?? false, true)
+		XCTAssertEqual(witnesses.object(forKey: "MyL2Test3") as? Bool ?? false, true)
+	}
+	
 }

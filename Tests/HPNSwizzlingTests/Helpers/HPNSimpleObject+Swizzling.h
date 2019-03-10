@@ -20,5 +20,6 @@ limitations under the License. */
 NS_ASSUME_NONNULL_BEGIN
 
 void doSimpleChildSwizzle(void);
+void doDoubleInvertedSwizzle(void);
 
 NS_ASSUME_NONNULL_END

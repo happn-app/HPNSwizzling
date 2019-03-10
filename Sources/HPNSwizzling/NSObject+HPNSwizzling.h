@@ -21,16 +21,16 @@ limitations under the License. */
 
 @import Foundation;
 
-#import "HPNPreprocessorUtils.h" /* Stringification */
 
 
+/* Stringification. */
+#define _HPNsharp(x) #x
+#define HPNS(x) _HPNsharp(x)
 
 typedef IMP *IMPPointer;
 
 @interface NSObject (Swizzling)
 /* WARNING: None of these methods are thread-safe! */
-
-/* TODO: Extensive testing of these methods. */
 
 /* How to method-swizzle? Explanation by example below. Note the _absence_ of a
  * dispatch_once in the +load method. While it wouldn’t specifically hurt, it is
@@ -143,13 +143,13 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 
 #define CHECKED_SWIZZLE(theClass, theSelector, IMPFuncName, IMPPointerName) \
 	if (![theClass hpn_swizzle:@selector(theSelector) with:(IMP)IMPFuncName store:(IMPPointer)&IMPPointerName]) \
-		[NSException raise:@"Cannot swizzle a method" format:@"Tried to swizzle \""S(theSelector)"\" in class \""S(theClass)"\" with my version, but it failed."]; \
-	if (IMPPointerName == NULL) [NSException raise:@"Swizzled a method, but original function pointer is NULL" format:@"Swizzled \""S(theSelector)"\", but "S(IMPPointerName)" is NULL"]
+		[NSException raise:@"Cannot swizzle a method" format:@"Tried to swizzle \""HPNS(theSelector)"\" in class \""HPNS(theClass)"\" with my version, but it failed."]; \
+	if (IMPPointerName == NULL) [NSException raise:@"Swizzled a method, but original function pointer is NULL" format:@"Swizzled \""HPNS(theSelector)"\", but "HPNS(IMPPointerName)" is NULL"]
 
 #define CHECKED_SWIZZLE_OR_ADD(theClass, theSelector, IMPFuncName, IMPPointerName, backupSelector) \
 	if (![theClass hpn_swizzleOrAdd:@selector(theSelector) with:(IMP)IMPFuncName store:(IMPPointer)&IMPPointerName typesSelector:@selector(backupSelector)]) \
-		[NSException raise:@"Cannot swizzle or add a method" format:@"Tried to swizzle or add \""S(theSelector)"\" in class \""S(theClass)"\", but it failed."]
+		[NSException raise:@"Cannot swizzle or add a method" format:@"Tried to swizzle or add \""HPNS(theSelector)"\" in class \""HPNS(theClass)"\", but it failed."]
 
 #define CHECKED_ADD_ONLY_IF_NOT_EXIST(theClass, theSelector, IMPFuncName, theTypesSelector) \
 	if (![theClass hpn_addOnlyIfNotExist:@selector(theSelector) with:(IMP)IMPFuncName typesSelector:@selector(theTypesSelector)]) \
-		[NSException raise:@"Cannot add method only if not exist" format:@"Tried to add \""S(theSelector)"\" only if does not exist in class \""S(theClass)"\", but it failed. Maybe it does exist?"]
+		[NSException raise:@"Cannot add method only if not exist" format:@"Tried to add \""HPNS(theSelector)"\" only if does not exist in class \""HPNS(theClass)"\", but it failed. Maybe it does exist?"]

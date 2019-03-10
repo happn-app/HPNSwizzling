@@ -13,21 +13,26 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-import XCTest
-@testable import HPNSwizzling
+#import "HPNSimpleObject+Swizzling.h"
+
+@import Foundation;
+@import HPNSwizzling;
 
 
 
-class HPNSwizzlingTests : XCTestCase {
-	
-	override func setUp() {
-		witnesses = [:]
-	}
-	
-	func testSimpleSwizzleAtLoad() {
-		HPNSimpleObject0().printHello1()
-		XCTAssertEqual(witnesses.object(forKey: "printHello1") as? Bool ?? false, true)
-		XCTAssertEqual(witnesses.object(forKey: "MyL0PrintHello1") as? Bool ?? false, true)
-	}
-	
+@implementation HPNSimpleObject0 (Swizzling)
+
+static void MyL0PrintHello1(id self, SEL _cmd);
+static void (*OriginalL0PrintHello1)(id self, SEL _cmd);
+
+static void MyL0PrintHello1(id self, SEL _cmd) {
+	witnesses[@"MyL0PrintHello1"] = @YES;
+	OriginalL0PrintHello1(self, _cmd);
 }
+
++ (void)load
+{
+	CHECKED_SWIZZLE(HPNSimpleObject0, printHello1, MyL0PrintHello1, OriginalL0PrintHello1);
+}
+
+@end

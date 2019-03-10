@@ -13,17 +13,9 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
-#ifndef HPNPreprocessorUtils_h
-# define HPNPreprocessorUtils_h
+#import "HPNSimpleObject.h"
 
 
-/* Stringification */
-# define _sharp(x) #x
-# define S(x) _sharp(x)
 
-
-/* Static assert */
-# define STATIC_ASSERT(test, msg) typedef char _static_assert_##msg[((test)? 1: -1)]
-
-
-#endif /* HPNPreprocessorUtils_h */
+NS_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_END

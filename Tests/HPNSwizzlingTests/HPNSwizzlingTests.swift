@@ -31,4 +31,12 @@ class HPNSwizzlingTests : XCTestCase {
 		XCTAssertEqual(witnesses.object(forKey: "MyL0Test1") as? Bool ?? false, true)
 	}
 	
+	func testSimpleSwizzleInChild() {
+		assert(witnesses.count == 0)
+		doSimpleChildSwizzle()
+		HPNSimpleObject1().test2()
+		XCTAssertEqual(witnesses.object(forKey: "test2") as? Bool ?? false, true)
+		XCTAssertEqual(witnesses.object(forKey: "MyL1Test2") as? Bool ?? false, true)
+	}
+	
 }

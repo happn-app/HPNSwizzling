@@ -13,11 +13,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. */
 
+#import "HPNSimpleObject+Swizzling.h"
+
 @import Foundation;
 
 @import HPNSwizzling;
-
-#import "HPNSimpleObject.h"
 
 
 
@@ -37,3 +37,16 @@ static void MyL0Test1(id self, SEL _cmd) {
 }
 
 @end
+
+
+static void MyL1Test2(id self, SEL _cmd);
+static void (*OriginalL1Test2)(id self, SEL _cmd);
+
+static void MyL1Test2(id self, SEL _cmd) {
+	witnesses[@"MyL1Test2"] = @YES;
+	OriginalL1Test2(self, _cmd);
+}
+
+void doSimpleChildSwizzle(void) {
+	CHECKED_SWIZZLE(HPNSimpleObject1, test2, MyL1Test2, OriginalL1Test2);
+}

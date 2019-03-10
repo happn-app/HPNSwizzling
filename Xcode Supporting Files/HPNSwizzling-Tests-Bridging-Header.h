@@ -3,3 +3,4 @@
  */
 
 #import "HPNSimpleObject.h"
+#import "HPNSimpleObject+Swizzling.h"

@@ -2,7 +2,6 @@
 A swizzling that works.
 
 ## Installation
-
 Either via Carthage (recommended), or by copying `NSObject+HPNSwizzling.{h,m}` into your project.
 
 ⚠️ **Important**: If you decide to link against a so-called _static_ framework build of HPNSwizzling,
@@ -12,7 +11,6 @@ The error message will be something along the lines of `+[SwizzledClass hpn_swiz
 unrecognized selector sent to class`.
 
 ## Usage
-
 ```objectivec
 @import HPNSwizzling; /* If installed via Carthage. */
 

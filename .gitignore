@@ -1,2 +1,6 @@
+# macOS & Xcode
 .DS_Store
 xcuserdata/
+
+# Carthage
+/Carthage/

@@ -1,4 +1,6 @@
 # HPNSwizzling
+![Platforms](https://img.shields.io/badge/platform-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS-lightgrey.svg?style=flat) [![Carthage compatible](https://img.shields.io/badge/carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License](https://img.shields.io/github/license/happn-tech/HPNSwizzling.svg)](License.txt) [![happn](https://img.shields.io/badge/from-happn-0087B4.svg?style=flat)](https://happn.com)
+
 A swizzling that works.
 
 ## Installation
@@ -33,5 +35,5 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 @end
 ```
 
-## License
-[Apache License 2.0](License.txt)
+## Credits
+This project was originally created by [François Lamboley](https://github.com/Frizlab) while working at [happn](https://happn.com).

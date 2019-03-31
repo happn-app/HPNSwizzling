@@ -33,7 +33,7 @@
 
 /* Begin PBXFileReference section */
 		7B02C7B922355CDE000481E8 /* HPNSwizzling.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPNSwizzling.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; wrapsLines = 1; };
 		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 		7B317610201527E900AD66FD /* HPNSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPNSwizzling.h; sourceTree = "<group>"; };
 		7B3176152015282100AD66FD /* ObjcCategoryLibrary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ObjcCategoryLibrary.c; sourceTree = "<group>"; };

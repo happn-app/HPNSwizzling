@@ -31,7 +31,7 @@ class HPNSwizzlingTests : XCTestCase {
 	
 	func testSimpleSwizzleAtLoad() {
 		assert(witnesses.count == 0)
-		HPNSimpleObject0().test1()
+		HPNSimpleObject0().doTest1()
 		XCTAssertEqual(witnesses.object(forKey: "test1") as? Bool ?? false, true)
 		XCTAssertEqual(witnesses.object(forKey: "MyL0Test1") as? Bool ?? false, true)
 	}
@@ -39,7 +39,7 @@ class HPNSwizzlingTests : XCTestCase {
 	func testSimpleSwizzleInChild() {
 		assert(witnesses.count == 0)
 		doSimpleChildSwizzle()
-		HPNSimpleObject1().test2()
+		HPNSimpleObject1().doTest2()
 		XCTAssertEqual(witnesses.object(forKey: "test2") as? Bool ?? false, true)
 		XCTAssertEqual(witnesses.object(forKey: "MyL1Test2") as? Bool ?? false, true)
 	}
@@ -47,7 +47,7 @@ class HPNSwizzlingTests : XCTestCase {
 	func testDoubleInvertedSwizzle() {
 		assert(witnesses.count == 0)
 		doDoubleInvertedSwizzle()
-		HPNSimpleObject2().test3()
+		HPNSimpleObject2().doTest3()
 		XCTAssertEqual(witnesses.object(forKey: "test3") as? Bool ?? false, true)
 		XCTAssertEqual(witnesses.object(forKey: "MyL1Test3") as? Bool ?? false, true)
 		XCTAssertEqual(witnesses.object(forKey: "MyL2Test3") as? Bool ?? false, true)

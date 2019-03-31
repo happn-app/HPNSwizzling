@@ -33,7 +33,7 @@ static void MyL0Test1(id self, SEL _cmd) {
 
 + (void)load
 {
-	CHECKED_SWIZZLE(HPNSimpleObject0, test1, MyL0Test1, OriginalL0Test1);
+	CHECKED_SWIZZLE(HPNSimpleObject0, doTest1, MyL0Test1, OriginalL0Test1);
 }
 
 @end
@@ -48,7 +48,7 @@ static void MyL1Test2(id self, SEL _cmd) {
 }
 
 void doSimpleChildSwizzle(void) {
-	CHECKED_SWIZZLE(HPNSimpleObject1, test2, MyL1Test2, OriginalL1Test2);
+	CHECKED_SWIZZLE(HPNSimpleObject1, doTest2, MyL1Test2, OriginalL1Test2);
 }
 
 
@@ -70,6 +70,6 @@ static void MyL2Test3(id self, SEL _cmd) {
 }
 
 void doDoubleInvertedSwizzle(void) {
-	CHECKED_SWIZZLE(HPNSimpleObject2, test3, MyL2Test3, OriginalL2Test3);
-	CHECKED_SWIZZLE(HPNSimpleObject1, test3, MyL1Test3, OriginalL1Test3);
+	CHECKED_SWIZZLE(HPNSimpleObject2, doTest3, MyL2Test3, OriginalL2Test3);
+	CHECKED_SWIZZLE(HPNSimpleObject1, doTest3, MyL1Test3, OriginalL1Test3);
 }

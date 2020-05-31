@@ -4,7 +4,7 @@
 A swizzling that works.
 
 ## Installation
-Either via Carthage (recommended), or by copying `NSObject+HPNSwizzling.{h,m}` into your project.
+Either via SPM (recommended), or Carthage, or by copying `NSObject+HPNSwizzling.{h,m}` into your project.
 
 ⚠️ **Important**: If you decide to link against a so-called _static_ framework build of HPNSwizzling,
 you **must** add the `-ObjC` flag in _Other Linker Flags_ (`OTHER_LDFLAGS`) in the build settings of
@@ -34,6 +34,10 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 
 @end
 ```
+
+## Developers Notes
+The include folder in the HPNSwizzling source code folder is there for SPM-compatibility. It contains
+a special `HPNSwizzling.h` umbrella header and a soft link to the other header.
 
 ## Credits
 This project was originally created by [François Lamboley](https://github.com/Frizlab) while working at [happn](https://happn.com).

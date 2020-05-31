@@ -14,7 +14,7 @@ unrecognized selector sent to class`.
 
 ## Usage
 ```objectivec
-@import HPNSwizzling; /* If installed via Carthage. */
+@import HPNSwizzling; /* If installed via SPM or Carthage. */
 
 @implementation NSView (MyViewAdditions)
 

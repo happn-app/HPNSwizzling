@@ -44,6 +44,7 @@
 		7B8BD034200274B9009BE667 /* HPNSwizzlingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPNSwizzlingTests.swift; sourceTree = "<group>"; };
 		7B8E47D324840C3000FA751E /* HPNSwizzlingTestsSPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNSwizzlingTestsSPM.m; sourceTree = "<group>"; };
 		7B8E47F22484188600FA751E /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		7B8E47F424841BB800FA751E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7BC0AFB12235679400EF4920 /* NSObject+HPNSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HPNSwizzling.m"; sourceTree = "<group>"; };
 		7BC0AFB22235679400EF4920 /* NSObject+HPNSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HPNSwizzling.h"; sourceTree = "<group>"; };
 		7BC0AFBD22356A4F00EF4920 /* HPNSwizzling-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSwizzling-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -84,6 +85,7 @@
 			children = (
 				7B21BAD12003BF0600DFF758 /* License.txt */,
 				7B21BACE2003B2C600DFF758 /* Readme.md */,
+				7B8E47F424841BB800FA751E /* Package.swift */,
 				7B8BD01120026AF1009BE667 /* Sources */,
 				7B8BD031200274B9009BE667 /* Tests */,
 				7B8BD01B20026E8C009BE667 /* Xcode Supporting Files */,

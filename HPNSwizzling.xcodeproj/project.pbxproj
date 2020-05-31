@@ -12,7 +12,7 @@
 		7B317611201527E900AD66FD /* HPNSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B317610201527E900AD66FD /* HPNSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B3176162015282100AD66FD /* ObjcCategoryLibrary.c in Sources */ = {isa = PBXBuildFile; fileRef = 7B3176152015282100AD66FD /* ObjcCategoryLibrary.c */; };
 		7B8BD02320026E8C009BE667 /* HPNSwizzling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* HPNSwizzling.framework */; };
-		7B8BD036200274B9009BE667 /* HPNSwizzlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* HPNSwizzlingTests.swift */; };
+		7B8E47D524840E9700FA751E /* HPNSwizzlingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* HPNSwizzlingTests.swift */; };
 		7BC0AFB52235679400EF4920 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0AFB12235679400EF4920 /* NSObject+HPNSwizzling.m */; };
 		7BC0AFB62235679400EF4920 /* NSObject+HPNSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0AFB12235679400EF4920 /* NSObject+HPNSwizzling.m */; };
 		7BC0AFB72235679400EF4920 /* NSObject+HPNSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC0AFB22235679400EF4920 /* NSObject+HPNSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -42,6 +42,8 @@
 		7B8BD02220026E8C009BE667 /* HPNSwizzlingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HPNSwizzlingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* HPNSwizzlingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPNSwizzlingTests.swift; sourceTree = "<group>"; };
+		7B8E47D324840C3000FA751E /* HPNSwizzlingTestsSPM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPNSwizzlingTestsSPM.m; sourceTree = "<group>"; };
+		7B8E47F22484188600FA751E /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 		7BC0AFB12235679400EF4920 /* NSObject+HPNSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HPNSwizzling.m"; sourceTree = "<group>"; };
 		7BC0AFB22235679400EF4920 /* NSObject+HPNSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HPNSwizzling.h"; sourceTree = "<group>"; };
 		7BC0AFBD22356A4F00EF4920 /* HPNSwizzling-Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HPNSwizzling-Tests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -113,6 +115,8 @@
 		7B8BD01220026AF1009BE667 /* HPNSwizzling */ = {
 			isa = PBXGroup;
 			children = (
+				7B8E47F22484188600FA751E /* include */,
+				7B317610201527E900AD66FD /* HPNSwizzling.h */,
 				7BC0AFB22235679400EF4920 /* NSObject+HPNSwizzling.h */,
 				7BC0AFB12235679400EF4920 /* NSObject+HPNSwizzling.m */,
 			);
@@ -125,7 +129,6 @@
 				7B3176152015282100AD66FD /* ObjcCategoryLibrary.c */,
 				7B8BD01D20026E8C009BE667 /* Framework-Info.plist */,
 				7B8BD02920026E8C009BE667 /* Test-Info.plist */,
-				7B317610201527E900AD66FD /* HPNSwizzling.h */,
 				7BC0AFBD22356A4F00EF4920 /* HPNSwizzling-Tests-Bridging-Header.h */,
 			);
 			path = "Xcode Supporting Files";
@@ -143,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC0AFBC22356A0400EF4920 /* Helpers */,
+				7B8E47D324840C3000FA751E /* HPNSwizzlingTestsSPM.m */,
 				7B8BD034200274B9009BE667 /* HPNSwizzlingTests.swift */,
 			);
 			path = HPNSwizzlingTests;
@@ -330,8 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8E47D524840E9700FA751E /* HPNSwizzlingTests.swift in Sources */,
 				7BC0AFC022356A5000EF4920 /* HPNSimpleObject.m in Sources */,
-				7B8BD036200274B9009BE667 /* HPNSwizzlingTests.swift in Sources */,
 				7BC0AFC322356C9000EF4920 /* HPNSimpleObject+Swizzling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

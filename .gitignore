@@ -1,4 +1,4 @@
-# macOS & Xcode
+# Finder and Xcode
 .DS_Store
 xcuserdata/
 
@@ -15,6 +15,3 @@ xcuserdata/
 # by the `swift package config` command to store its config (currently, the only
 # config I’m aware of are the mirrors for downloading packages).
 /.swiftpm/
-
-# Carthage
-/Carthage/

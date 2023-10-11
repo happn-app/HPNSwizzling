@@ -7,8 +7,9 @@ A swizzling that works.
 Either via SPM (recommended), or by copying `NSObject+HPNSwizzling.{h,m}` into your project.
 
 ### Important Note
-The repository does have an `xcodeproj` with a shared scheme for debug purposes. The project
-might be compatible with Carthage–or not. It is not officially supported but might work for you.
+The repository does have an `xcodeproj` with a shared scheme for debug purposes.
+The project might be compatible with Carthage–or not.
+It is not officially supported but might work for you.
 
 ## Usage
 ```objectivec
@@ -34,8 +35,8 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 ```
 
 ## Developers Notes
-The include folder in the HPNSwizzling source code folder is there for SPM-compatibility. It contains
-a special `HPNSwizzling.h` umbrella header and a soft link to the other header.
+The include folder in the HPNSwizzling source code folder is there for SPM-compatibility.
+It contains a special `HPNSwizzling.h` umbrella header and a soft link to the other header.
 
 ## Credits
 This project was originally created by [François Lamboley](https://github.com/Frizlab) while working at [happn](https://happn.com).

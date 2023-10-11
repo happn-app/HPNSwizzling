@@ -15,6 +15,8 @@ limitations under the License. */
 
 #import "NSObject+HPNSwizzling.h"
 
+@import Foundation;
+
 @import ObjectiveC.runtime;
 
 
@@ -23,21 +25,23 @@ limitations under the License. */
 
 @property(nonatomic, retain) Class classOfOrigin;
 
-/* Pointer whose value is the original implementation of the swizzle. If
- * swizzling/adding implementation of method to superclass, this store must be
- * modified. */
+/**
+ A pointer whose value is the original implementation of the swizzle.
+ If swizzling/adding implementation of method to superclass, this store must be modified. */
 @property(nonatomic, assign) IMPPointer store;
 
-/* Whether the swizzle is locked. Can only be a hpn_addOnlyIfNotExist:...
- * swizzle.
- * If a swizzle is locked, if trying to add/swizzle a method of a superclass
- * with the same selector, an exception must be thrown. */
+/**
+ Whether the swizzle is locked.
+ Can only be an `hpn_addOnlyIfNotExist:...` swizzle.
+ 
+ If a swizzle is locked, if trying to add/swizzle a method of a superclass with the same selector, an exception must be thrown. */
 @property(nonatomic, assign, getter = isLocked) BOOL locked;
 
 + (instancetype)swizzlingInfosWithClassOfOrigin:(Class)c store:(IMPPointer)store;
 + (instancetype)swizzlingInfosWithClassOfOrigin:(Class)c store:(IMPPointer)store locked:(BOOL)locked;
 
 @end
+
 
 @implementation HPNSwizzlingInfo
 
@@ -226,8 +230,7 @@ static CFMutableDictionaryRef swizzlingInfos = NULL;
 	return [self hpn_addOnlyIfNotExist:added with:implementation typesSelector:typesSelector store:NULL];
 }
 
-+ (BOOL)hpn_addOnlyIfNotExist:(SEL)added with:(IMP)implementation typesSelector:(SEL)typesSelector
-							  	store:(IMPPointer)store
++ (BOOL)hpn_addOnlyIfNotExist:(SEL)added with:(IMP)implementation typesSelector:(SEL)typesSelector store:(IMPPointer)store
 {
 	if (store != NULL) *store = NULL;
 	

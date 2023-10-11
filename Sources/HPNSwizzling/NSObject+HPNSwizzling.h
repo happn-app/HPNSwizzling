@@ -19,7 +19,7 @@ limitations under the License. */
  * of superclass’s categories).
  */
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 
 

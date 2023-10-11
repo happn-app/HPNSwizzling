@@ -139,7 +139,7 @@ static void MySetFrame(id self, SEL _cmd, CGRect frame) {
 #define CHECKED_SWIZZLE(theClass, theSelector, IMPFuncName, IMPPointerName) \
 	if (![theClass hpn_swizzle:@selector(theSelector) with:(IMP)IMPFuncName store:(IMPPointer)&IMPPointerName]) \
 		[NSException raise:@"Cannot swizzle a method" format:@"Tried to swizzle \""HPNS(theSelector)"\" in class \""HPNS(theClass)"\" with my version, but it failed."]; \
-	if (IMPPointerName == NULL) [NSException raise:@"Swizzled a method, but original function pointer is NULL" format:@"Swizzled \""HPNS(theSelector)"\", but "HPNS(IMPPointerName)" is NULL"]
+	if (IMPPointerName == NULL) [NSException raise:@"Swizzled a method, but original function pointer is NULL" format:@"Swizzled \""HPNS(theSelector)"\", but "HPNS(IMPPointerName)" is NULL."]
 
 #define CHECKED_SWIZZLE_OR_ADD(theClass, theSelector, IMPFuncName, IMPPointerName, backupSelector) \
 	if (![theClass hpn_swizzleOrAdd:@selector(theSelector) with:(IMP)IMPFuncName store:(IMPPointer)&IMPPointerName typesSelector:@selector(backupSelector)]) \

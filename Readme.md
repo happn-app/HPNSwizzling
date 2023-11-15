@@ -1,6 +1,14 @@
 # HPNSwizzling
 ![Platforms](https://img.shields.io/badge/platform-macOS%20|%20iOS%20|%20tvOS%20|%20watchOS%20|%20visionOS-lightgrey.svg?style=flat) [![SPM compatible](https://img.shields.io/badge/SPM-compatible-E05C43.svg?style=flat)](https://swift.org/package-manager/) [![License](https://img.shields.io/github/license/happn-app/HPNSwizzling.svg)](License.txt) [![happn](https://img.shields.io/badge/from-happn-0087B4.svg?style=flat)](https://happn.com)
 
+---
+
+> [!NOTE]
+> This repo is no longer maintained by happn.
+> A maintained version is available from its creator at [Frizlab/FRZSwizzling](https://github.com/Frizlab/FRZSwizzling).
+
+---
+
 A swizzling that works.
 
 ## Installation
